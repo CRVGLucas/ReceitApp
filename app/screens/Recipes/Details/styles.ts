@@ -25,11 +25,17 @@ export const RecipeSubTitle = styled.Text`
     padding: 5px;
 `
 
+export const RecipeTertiaryTitle = styled.Text`
+    font-size: ${({ theme }) => theme.FONT_SIZE.L};
+    font-weight: bold;
+    text-align: center;
+    color: ${({ theme }) => theme.COLORS.RED_400};
+`
+
 export const RecipeDescription = styled.Text`
     font-size: ${({ theme }) => theme.FONT_SIZE.MD};
     text-align: justify;
     padding: 10px;
-    line-height: 1.7;
 `
 export const ButtonFavorite = styled.TouchableOpacity`
     padding: 10px;
@@ -38,6 +44,6 @@ export const ButtonFavorite = styled.TouchableOpacity`
     background: rgba(21,21,21,0.2);
     position: fixed;
     top: 5px;
-    right: 5px;
+    right: 1px;
     z-index: 999;
 `

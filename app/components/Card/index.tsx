@@ -1,11 +1,20 @@
 import { Eye, Heart } from "phosphor-react-native";
 import { ButtonDetails, ButtonFavorite, CardButtonOptionsContainer, CardContainer, CardImage, CardSubTitle, CardTitle, TextWhite } from "./styles";
 import { useNavigation } from "expo-router";
+import { NavigationContainerProps } from "@react-navigation/native";
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+type CardScreenNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  'Details'
+>;
 
+type Props = {
+    navigation: CardScreenNavigationProp;
+  };
 export function Card() {
     const navigation = useNavigation()
     function handleNavigateToDetails(){
-        navigation.navigate("details")
+        navigation.navigate("Details")
     }
     return (
         <CardContainer >

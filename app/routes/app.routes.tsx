@@ -1,31 +1,25 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { RecipeRegister } from "../screens/Recipes/Register";
 import { RecipeDetails } from "../screens/Recipes/Details";
 import { Home } from "../screens/Home";
-import { RecipeRegister } from "../screens/Recipes/Register";
-import { CaretLeft } from "phosphor-react-native";
-import { BackButton, WhiteIcon } from "./styles";
 
-const { Navigator, Screen} = createNativeStackNavigator()
+const { Navigator, Screen } = createNativeStackNavigator<RootStackParamList>()
 
 export function AppRoutes() {
     return (
-        <Navigator>
+        <Navigator initialRouteName="Home">
             <Screen
-                name="home"
+                name="Home"
                 component={Home}
                 options={{ headerShown: false }}
             />
             <Screen 
-                name="details"
+                name="Details"
                 component={RecipeDetails}
-                options={({navigation }) => ({ headerShown: false, headerLeft: () => (
-                <BackButton onPress={navigation.goBack} >
-                    <WhiteIcon/>
-                </BackButton>
-            ), })}
+                options={({ headerShown: false })}
             />
             <Screen 
-                name="register"
+                name="Register"
                 component={RecipeRegister}
                 options={{ headerShown: false }}
             />

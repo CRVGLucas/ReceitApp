@@ -1,14 +1,13 @@
-import { Theme } from "@/app/interfaces/theme.interface";
 import styled from "styled-components/native";
 
 export const HomeContainer = styled.View`
     flex: 1;
-    background: ${(theme: Theme) => theme.COLORS.BEIGE_500};
+    background: ${({theme}) => theme.COLORS.BEIGE_500};
 `
 
 export const HomeContent = styled.View`
     margin-top: 50px;
-    padding: 0 10%;
+    padding: 10px 20px 0 20px;
 `
 
 export const ListCardsContainer = styled.View`

@@ -9,7 +9,6 @@ import { NavigationContainer } from '@react-navigation/native';
 export default function HomeScreen() {
   const [isFontsLoaded] = useFonts({Roboto_400Regular, Roboto_700Bold})
   return (
-    <NavigationContainer>
       <ThemeProvider theme={theme}>
         <StatusBar backgroundColor="transparent" translucent />
         {
@@ -19,6 +18,5 @@ export default function HomeScreen() {
           <ActivityIndicator/>
         }
       </ThemeProvider>
-    </NavigationContainer>
   );
 }

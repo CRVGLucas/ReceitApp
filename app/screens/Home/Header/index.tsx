@@ -1,7 +1,7 @@
 
 import { Text } from "react-native";
-import { HomeFormContainer, HomeHeaderContainer, HomeSearchButton, HomeSearchInput } from "./styles";
-import { MagnifyingGlass } from "phosphor-react-native";
+import { CreateNewReciepe, HomeFormContainer, HomeHeaderContainer, HomeSearchButton, HomeSearchInput, HomeTextWhite } from "./styles";
+import { MagnifyingGlass, Receipt } from "phosphor-react-native";
 
 export function HomeHeader() {
 
@@ -16,10 +16,10 @@ export function HomeHeader() {
                 </HomeSearchButton> 
             </HomeFormContainer> 
 
-            {/* <CreateNewReciepe>
+            <CreateNewReciepe>
                 <HomeTextWhite>cadastrar receita</HomeTextWhite>
                 <Receipt color="#FFF" size={32} />
-            </CreateNewReciepe> */}
+            </CreateNewReciepe>
         </HomeHeaderContainer>
     )
 }
